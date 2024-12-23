@@ -34,7 +34,7 @@ export default function Footer() {
             elegant pieces to bold statements, we offer a wide range of designs
             crafted with the finest fabrics, ensuring both comfort and style.
             <br />
-            Discover the magic of fashion at MHS. Whether you're dressing up for
+            Discover the magic of fashion at MHS. Whether you&apos;re dressing up for
             a special occasion or updating your everyday essentials, our
             collections are here to inspire your next look and help you express
             your unique style.
