@@ -1,4 +1,5 @@
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 import { Stack, Typography, Box } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -33,13 +34,13 @@ const cards = [
   },
 ];
 
-export default function Home() {
+export default function about() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -48,47 +49,7 @@ export default function Home() {
 
   return (
     <Stack>
-      <Stack
-        sx={{
-          alignItems: "center",
-          backgroundColor: "#f5f5f5",
-          padding: 2,
-          borderRadius: "8px",
-        }}
-      >
-        <Box
-          sx={{
-            width: 200,
-            height: 200,
-            position: "relative",
-            overflow: "hidden",
-            borderRadius: "50%",
-          }}
-        >
-          <Image
-            src="/mhs_logo.png"
-            alt="MHS Logo"
-            layout="fill"
-          />
-        </Box>
-
-        <Typography
-          sx={{
-            fontSize: "50px",
-            fontWeight: "semi-bold",
-          }}
-        >
-          Mikun House of Fashion
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "20px",
-            color: "gray",
-          }}
-        >
-          Welcome to the Home page!
-        </Typography>
-      </Stack>
+     <Header/>
       <Box
         sx={{
           width: "100%",
@@ -100,7 +61,6 @@ export default function Home() {
           position: "relative",
           overflow: "hidden",
           backgroundColor: "#f5f5f5",
-          padding: 4,
           borderRadius: "8px",
         }}
       >
@@ -112,6 +72,7 @@ export default function Home() {
             width: "100%",
             height: "auto",
             objectFit: "cover",
+            backgroundSize:'cover',
             borderRadius: "8px",
           }}
         />
@@ -120,8 +81,8 @@ export default function Home() {
           sx={{
             position: "absolute",
             width:'50%',
-            bottom: 1,
-            left: 1,
+            bottom: 0,
+            left: 0,
             backgroundColor: "rgba(0, 0, 0, 0.6)",
             color: " #e7d7d7",
             padding: 2,
